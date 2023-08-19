@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input {
+  border: none;
+  outline: none;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(315deg, black, #2451e8, #e91e63);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  position: relative;
+  padding: 20px;
+  padding-top: 100px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: 100px repeat(5, 60px);
+  background-color: white;
+  gap: 10px;
+  box-shadow: 5px 5px 15px #00000054, -5px -5px 15px #00000054;
+  transition: 0.2s;
+}
+.calculator.dark {
+  background-color: #202020;
+}
+.calculator input[type="text"] {
+  grid-area: 1/1/2/5;
+  font-size: 40px;
+  text-align: right;
+  background-color: transparent;
+  transition: 0.2s;
+}
+.calculator.dark input[type="text"] {
+  color: white;
+}
+.calculator input[type="button"] {
+  background-color: #aad9ff;
+  font-size: 25px;
+  color: #4a4a4a;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.calculator.dark input[type="button"] {
+  background-color: #aad9ff5c;
+  color: white;
+}
+.calculator input[value="="] {
+  background-color: #47ffd7;
+  font-size: 35px;
+}
+.calculator.dark input[value="="] {
+  background-color: #47ffd794;
+  color: #4a4a4a;
+}
+.calculator input[value="AC"] {
+  color: red;
+  background-color: #ffafaf;
+}
+.calculator.dark input[value="AC"] {
+  color: red;
+  background-color: #ff34343b;
+}
+.calculator input.move {
+  background-color: #ffb8fd;
+  color: #c922e6;
+}
+.calculator.dark input.move {
+  background-color: #ff52fa2e;
+  color: #c922e6;
+}
+.calculator input[value="AC"],
+.calculator input[value="DE"] {
+  font-size: 22px;
+}
+.calculator .circle {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.calculator.dark .circle {
+  background-color: white;
+}
+.calculator .title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #2196f3;
+  color: white;
+  font-size: 19px;
+  font-weight: 100;
+  text-align: center;
+  font-family: system-ui;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+}
